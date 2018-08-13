@@ -1,0 +1,39 @@
+<div class="container" ng-controller="myCtrl" ng-init="getdata()">
+	<h1 class="text-center">Welcome {{newdata.fullname}} !!!</h1>
+	<table class="table table-bordered">
+		<tr>
+			<td>Fullname </td>
+			<td> {{newdata.fullname}}</td>
+		</tr>
+
+		<tr>
+			<td>Username</td>
+			<td> {{newdata.username}}</td>
+		</tr>
+	</table>
+	<button class="btn btn-primary" data-target="#edit" data-toggle="modal">Edit</button>
+
+
+
+<div class="modal fade" id="edit">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="text-center">Edit Details</h3>
+			</div>
+			<div class="modal-body">
+				<label>fullname</label>
+				<input type="text" ng-model="newdata.fullname" class="form-control">
+
+				<label>username</label>
+				<input type="text" ng-model="newdata.username" class="form-control">
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success" data-dismiss="modal">Close</button>
+				<button class="btn btn-danger" data-dismiss="modal" ng-click="update()">Update</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
